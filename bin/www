@@ -13,7 +13,7 @@ const http = require('http');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '6969');
 app.set('port', port);
 
 /**
@@ -27,7 +27,7 @@ const server = http.createServer(app);
  */
 
 server.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
+  console.log(`Server is running on port ${port} | click http://localhost:${port}/ to preview`)
 });
 server.on('error', onError);
 server.on('listening', onListening);
