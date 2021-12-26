@@ -13,7 +13,6 @@ async function connect() {
   } catch (error) {
     console.log(`Connect database failure!!!
      ${error}`);
-
     console.log("Connection String: " + connection_string);
   }
 }
