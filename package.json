@@ -6,7 +6,7 @@
     "node": "16.13.1"
   },
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "async": "^3.2.2",
