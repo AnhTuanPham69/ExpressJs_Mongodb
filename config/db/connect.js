@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const mongoose = require("mongoose");
+// import mongoose from 'mongoose';
 
 const connection_string = process.env.CONNECTION_STRING;
 async function connect() {

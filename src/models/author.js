@@ -33,16 +33,13 @@ AuthorSchema
 AuthorSchema.virtual('lifespan').get(function() {
   let lifetime_string = '';
   if (this.date_of_birth) {
-    // DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED);
     lifetime_string = DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED);
   }else{
     lifetime_string = "Unknown";
   }
   lifetime_string += ' - ';
   if (this.date_of_death) {
-    DateTime.fromJSDate(this.date_of_death).toLocaleString(DateTime.DATE_MED);
-    lifetime_string += this.date_of_death.getYear()
-    console.log(lifetime_string);
+    lifetime_string += DateTime.fromJSDate(this.date_of_death).toLocaleString(DateTime.DATE_MED);
   }else{
     lifetime_string += "Unknown";
   }
