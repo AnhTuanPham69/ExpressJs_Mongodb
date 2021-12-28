@@ -19,10 +19,5 @@ BookSchema
   return '/catalog/book/' + this._id;
 });
 
-//  countDocuments(BookSchema, function (err, count) {
-//     // ... do something if there is an err
-//     // ... do something with the count if there was no error
-//     return count;
-//     });
 //Export model
 module.exports = mongoose.model('Book', BookSchema);

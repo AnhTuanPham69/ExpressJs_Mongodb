@@ -4,6 +4,7 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const helmet = require('helmet');
 const createError = require('http-errors');
 
 const db = require("./config/db/connect");
@@ -14,7 +15,7 @@ const wikiRouter = require("./src/routes/wiki");
 const catalogRouter = require('./src/routes/catalog'); 
 
 const app = express();
-
+app.use(helmet());
 // Connect to database
 db.connect();
 
